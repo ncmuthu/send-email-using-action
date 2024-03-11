@@ -1,0 +1,13 @@
+name: Send Email
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Send Email Action
+        uses: ncmuthu/gh-actionsend-mail@main    
