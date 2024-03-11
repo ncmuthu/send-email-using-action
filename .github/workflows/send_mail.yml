@@ -10,4 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Send Email Action
-        uses: ncmuthu/gh-action-send-mail/send-email-action@main    
+        uses: ncmuthu/gh-action-send-mail/send-email-action@main
+        with:
+          to_email: ${{ secrets.EMAIL_TO }}
+          from_email: ${{ secrets.EMAIL_FROM }}
+          smtp_server: ${{ secrets.SMTP_SERVER }}
+          smtp_port: ${{ secrets.SMTP_PORT }}
+          smtp_username: ${{ secrets.SMTP_USERNAME }}
+          smtp_password: ${{ secrets.SMTP_PASSWORD }}        
