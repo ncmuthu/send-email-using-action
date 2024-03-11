@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Send Email Action
-        uses: ncmuthu/gh-actionsend-mail@main    
+        uses: ncmuthu/gh-action-send-mail@main    
