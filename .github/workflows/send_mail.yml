@@ -17,4 +17,6 @@ jobs:
           smtp_server: ${{ secrets.SMTP_SERVER }}
           smtp_port: ${{ secrets.SMTP_PORT }}
           smtp_username: ${{ secrets.SMTP_USERNAME }}
-          smtp_password: ${{ secrets.SMTP_PASSWORD }}        
+          smtp_password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "Test email using gh action"
+          body: "Test email from gh"
