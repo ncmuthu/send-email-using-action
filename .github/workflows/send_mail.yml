@@ -8,6 +8,8 @@ on:
 jobs:
   send_email:
     runs-on: ubuntu-latest
+    container:
+      image: python:3.10.13-slim
     steps:
       - name: Call Send Email Action
         uses: ncmuthu/gh-action-send-mail/send-email-action@dev
