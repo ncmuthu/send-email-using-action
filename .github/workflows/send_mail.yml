@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Send Email Action
-        uses: ncmuthu/gh-action-send-mail/send-email-action@main
+        uses: ncmuthu/gh-action-send-mail/send-email-action@dev
         with:
           to_email: ${{ secrets.TO_EMAIL }}
           from_email: ${{ secrets.FROM_EMAIL }}
