@@ -8,13 +8,9 @@ on:
 jobs:
   send_email:
     runs-on: ubuntu-latest
-    container:
-      image: python:3.10.13-slim
-    steps:
-      - name: Checkout action repository
-        uses: actions/checkout@v2      
+    steps:    
       - name: Call Send Email Action
-        uses: ncmuthu/gh-action-send-mail/send-email-action@dev
+        uses: ncmuthu/gh-action-send-mail-docker/send-email-action@main
         with:
           to_email: ${{ secrets.TO_EMAIL }}
           from_email: ${{ secrets.FROM_EMAIL }}
