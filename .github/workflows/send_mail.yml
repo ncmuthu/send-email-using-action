@@ -12,7 +12,7 @@ jobs:
       - name: Call Send Email Action
         uses: ncmuthu/gh-action-send-mail-docker/send-email-action@main
         with:
-          to_email: "ncmuthu@gmail.com, ncmuthuaws@gmail.com"
+          to_email: "ncmuthu@gmail.com"
           from_email: ${{ secrets.FROM_EMAIL }}
           smtp_server: ${{ secrets.SMTP_SERVER }}
           smtp_port: ${{ secrets.SMTP_PORT }}
