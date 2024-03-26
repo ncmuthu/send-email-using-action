@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Get Committer Email
         id: commit_email
-        run: echo "::set-output name=email::$(git log -1 --pretty=format:'%ae')"
+        run: echo "email=$(git log -1 --pretty=format:'%ae')" >> $GITHUB_OUTPUT
       - name: Display Outputs
         run: |
           echo "Committer Email: ${{ steps.commit_email.outputs.email }}"      
