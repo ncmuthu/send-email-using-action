@@ -20,7 +20,7 @@ jobs:
       - name: Call Send Email Action
         uses: ncmuthu/gh-action-send-mail-docker/send-email-action@main
         with:
-          to_email: "ncmuthu@gmail.com, ncmuthuaws@gmail.com"
+          to_email: ${{ steps.commit_email.outputs.email }}
           from_email: ${{ secrets.FROM_EMAIL }}
           smtp_server: ${{ secrets.SMTP_SERVER }}
           smtp_port: ${{ secrets.SMTP_PORT }}
@@ -28,6 +28,6 @@ jobs:
           smtp_password: ${{ secrets.SMTP_PASSWORD }}
           subject: "Test email using gh action"
           mail_body: | 
-            "Hi, 
-            Test email from gh01
-            Thanks. "
+            Hi, 
+            Test email from gh01 ${{ steps.commit_email.outputs.email }}
+            Thanks.
