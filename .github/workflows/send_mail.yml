@@ -9,6 +9,8 @@ jobs:
   send_email:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
       - name: Get Committer Email
         id: commit_email
         run: echo "::set-output name=email::$(git log -1 --pretty=format:'%ae')"
