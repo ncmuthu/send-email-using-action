@@ -8,7 +8,13 @@ on:
 jobs:
   send_email:
     runs-on: ubuntu-latest
-    steps:    
+    steps:
+      - name: Get Committer Email
+        id: commit_email
+        run: echo "::set-output name=email::$(git log -1 --pretty=format:'%ae')"
+      - name: Display Outputs
+        run: |
+          echo "Committer Email: ${{ steps.commit_email.outputs.email }}"      
       - name: Call Send Email Action
         uses: ncmuthu/gh-action-send-mail-docker/send-email-action@main
         with:
