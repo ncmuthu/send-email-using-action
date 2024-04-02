@@ -8,7 +8,7 @@ jobs:
       - name: Kaniko build
         uses: aevea/action-kaniko@master
         with:
-          image: aevea/kaniko
+          image: ncmuthu2015/kaniko
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}          
           cache: true
