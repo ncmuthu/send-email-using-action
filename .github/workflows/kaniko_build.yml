@@ -17,4 +17,5 @@ jobs:
       - uses: int128/kaniko-action@v1
         with:
           push: true
+          tags: ${{ steps.metadata.outputs.tags }}
           context: "build/"
